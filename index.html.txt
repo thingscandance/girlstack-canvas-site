@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GIRLSTACK Canvas</title>
+  <!-- Нежный грэд для заголовков, «девичий» интерфейс -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- (опционально) Гугл-шрифт с гуманным кёрнингом -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-girlstack">
+  <header class="site-header">
+    <h1>GIRLSTACK ✿ док/канва</h1>
+    <p class="lead">квир-исследование, эротика как инфраструктура, attention-ecology</p>
+    <nav class="tagline">
+      <a href="#intro">введение</a>
+      <a href="#gallery">картинки/гиф</a>
+      <a href="#video">видео</a>
+      <a href="#links">ссылки</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- ВСТУПЛЕНИЕ С ОБТЕКАНИЕМ ИЗОБРАЖЕНИЕМ -->
+    <section id="intro">
+      <h2>Введение 💗</h2>
+
+      <!-- фигурка справа, обтекание + «круглая» форма -->
+      <figure class="float-right shape-circle w40">
+        <img src="media/flower.png" alt="flower / girlstack aura">
+        <figcaption>«мягкая» аура: attention as milieu</figcaption>
+      </figure>
+
+      <p>
+        Мы тестируем форму публикации с <strong>обтеканием</strong> медиа:
+        текст визуально «играет» с картинками, гифами и видео. Подход в духе
+        <em>girlstack</em>: мягкая агрессия, тактическая пассивность, эмодзи-сигналы.
+        Заголовки — розовые, ссылки — подчёркнуты волной, медиа — плавно вписаны.
+      </p>
+      <p>
+        Идея: не «иллюстрировать» текст, а <em>встраивать</em> медиа как параметры мышления:
+        петли внимания, латентные подсказки, микро-UI. Эта страница — готовый шаблон.
+      </p>
+    </section>
+
+    <!-- ГАЛЕРЕЯ/ГИФ -->
+    <section id="gallery">
+      <h2>Картинки и гифки 🫧</h2>
+
+      <!-- фигурка слева, обтекание + прямоугольная форма -->
+      <figure class="float-left shape-soft w40">
+        <img src="media/loop.gif" alt="looping gif">
+        <figcaption>луп / повтор как учебная кривая</figcaption>
+      </figure>
+
+      <p>
+        Гифы вставляются как обычные <code>&lt;img&gt;</code>. Если файл тяжёлый,
+        лучше заменить его на короткий <code>mp4</code>/<code>webm</code> c
+        <code>autoplay muted loop playsinline</code> (см. ниже). Для «кружка» обтекания — класс
+        <code>.shape-circle</code>, для мягкого прямоугольника — <code>.shape-soft</code>.
+      </p>
+      <p>
+        Обтекание работает через <code>float</code> + <code>shape-outside</code>, а на мобильном
+        всё складывается в колонку (см. медиазапросы в CSS). Подписи — через
+        <code>&lt;figcaption&gt;</code>.
+      </p>
+      <div class="clear"></div>
+    </section>
+
+    <!-- ВИДЕО: ЛОКАЛЬНОЕ И YOUTUBE -->
+    <section id="video">
+      <h2>Видео 🪽</h2>
+
+      <h3 class="pink-sub">Локальное зацикленное видео</h3>
+      <figure class="block-media">
+        <video
+          src="media/clip.mp4"
+          poster="media/poster.jpg"
+          autoplay
+          muted
+          loop
+          playsinline
+          class="video"
+        ></video>
+        <figcaption>локальный mp4: лёгкий, управляемый, без чужих логотипов</figcaption>
+      </figure>
+
+      <h3 class="pink-sub">Встраивание YouTube/Vimeo</h3>
+      <div class="embed">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="YouTube player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+      <p class="note">Контейнер <code>.embed</code> держит соотношение сторон через CSS
+        <code>aspect-ratio</code>.</p>
+    </section>
+
+    <!-- ССЫЛКИ/НОТЫ -->
+    <section id="links">
+      <h2>Ссылки и примечания 🌸</h2>
+      <ul class="links">
+        <li>Наш репозиторий: <a href="https://github.com/твоеимя/girlstack-canvas-site" target="_blank" rel="noopener">GitHub Pages</a></li>
+        <li>Док/эссе: <a href="#intro">Введение</a>, <a href="#video">Видео</a></li>
+        <li>Эмодзи-палитра: 💗 🩰 👛 💿 🕸️ 🫧 🌸 🪽 🧬 💅</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© girlstack lab — CC BY-SA</p>
+  </footer>
+</body>
+</html>
