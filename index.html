@@ -6,6 +6,28 @@
   <title>GIRLSTACK LAB 💗 Decoy Girls</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ASCII-герой вместо «цветочка» */
+    .ascii-hero{
+      white-space:pre; font:700 14px/1.1 ui-monospace,Menlo,Consolas,monospace;
+      color:#ff66c4; text-shadow:0 2px 12px rgba(255,102,161,.35), 0 0 1px #fff;
+      background:transparent; padding:8px 10px; border-radius:16px; display:block;
+    }
+    /* поверх всего и крупнее (если в style.css было иначе — это перебьёт) */
+    .ascii-pop{
+      position:fixed; z-index:2147483647; pointer-events:none; white-space:pre;
+      font-family:ui-monospace,Menlo,Consolas,monospace; font-weight:700; letter-spacing:.5px;
+      color:#ff66c4; text-shadow:0 2px 18px rgba(255,102,161,.45), 0 0 2px #fff;
+      opacity:0; transform:translate(-50%,-50%) scale(.96);
+      animation:popRise 2200ms ease-out forwards;
+    }
+    @keyframes popRise{
+      0%{opacity:0; transform:translate(-50%,-40%) scale(.96)}
+      12%{opacity:1}
+      70%{opacity:1}
+      100%{opacity:0; transform:translate(-50%,-90%) scale(1.05)}
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -60,10 +82,16 @@
     <!-- INTRO -->
     <section id="intro">
       <h2>Введение / Manifesto 💗</h2>
-      <figure class="float-right shape-circle w32">
-        <img src="media/1.png" alt="flower / girlstack aura">
-        <figcaption>«мягкая» аура: attention as milieu</figcaption>
-      </figure>
+
+      <!-- ASCII вместо картинки-«цветка» -->
+      <pre class="ascii-hero float-right w32 shape-soft" aria-hidden="true">
+  .·:*¨༺  *  ༻¨*:·.
+      \   |   /
+  — — —  ౨ৎ  — — —
+      /   |   \
+     (  ˘͈ ᵕ ˘͈ )    ✿
+      `-..♡..-´
+      </pre>
 
       <p>В эпоху платформ доверие стало управляемой инфраструктурой. Эротика встраивается в эту логику: обещание
       «реального тела» монетизируется как доступ к интимности. <em>Decoy Girls</em> меняет оптику: мы рассматриваем
@@ -106,7 +134,6 @@
       <figure class="float-right shape-circle w32">
         <img src="media/output.png" alt="decoy types">
       </figure>
-
       <p><strong>Ультра‑гладкая.</strong> Идеальное Instagram‑тело; гладкость как маска алгоритма.</p>
       <p><strong>Gothic.</strong> Глитч и призрак; цифровая девушка как spectral‑фигура.</p>
       <p><strong>Angel/Mystic.</strong> Тело‑медиум; обещание трансценденции как код.</p>
@@ -121,10 +148,8 @@
         <img src="media/4.png" alt="interface atlas">
         <figcaption>атлас интерфейсов и метрик</figcaption>
       </figure>
-
-      <p>Исследовательский атлас: публичные скриншоты интерфейсов, визуальные стили, рекламные
-      стратегии, заметки о видимости/цензуре. Позднее — полевые дневники, карты взаимодействий и фрагменты переписок
-      (обезличенно).</p>
+      <p>Исследовательский атлас: публичные скриншоты интерфейсов, визуальные стили, рекламные стратегии, заметки о
+      видимости/цензуре. Позднее — полевые дневники, карты взаимодействий и фрагменты переписок (обезличенно).</p>
       <div class="clear"></div>
     </section>
 
@@ -134,13 +159,10 @@
       <figure class="float-right shape-circle w32">
         <img src="media/old2.png" alt="lab bubble">
       </figure>
-
       <p><strong>Перформанс + ресёрч + архивация.</strong> Генеративные тексты/изображения, ведение аккаунтов как
       перформативных интерфейсов, переписки как полевые интервью, фиксация сбоев и реакций.</p>
-
-      <p><strong>Модули.</strong> Тон, визуальные паттерны, тактики доверия, дистрибуция, контр‑модуль
-      (noise‑вставки, прозрачность алгоритма через наложение схем/кода).</p>
-
+      <p><strong>Модули.</strong> Тон, визуальные паттерны, тактики доверия, дистрибуция, контр‑модуль (noise‑вставки,
+      прозрачность алгоритма через наложение схем/кода).</p>
       <p><strong>Этика.</strong> Работа ведётся аватарами, все взаимодействия обезличиваются; учитываются риски
       ghost‑work, неравный доступ к телесным технологиям и цифровой безопасности.</p>
       <div class="clear"></div>
@@ -152,14 +174,12 @@
       <figure class="float-left shape-soft w32">
         <img src="media/vid.gif" alt="reading mood">
       </figure>
-
       <ul>
         <li>Jussi Parikka — <em>Insect Media</em></li>
         <li>Caroline Bassett & Luciana Parisi — <em>Thinking with the Female Drone</em></li>
         <li>Bogna Konior — <em>AI Erotics</em></li>
         <li>Alex Quicho — <em>Girlstack</em></li>
       </ul>
-
       <p class="pink-sub">Инициатор проекта: GIRLSTACK LAB 💗</p>
       <div class="clear"></div>
     </section>
@@ -169,12 +189,12 @@
     <p>© GIRLSTACK LAB — CC BY‑SA</p>
   </footer>
 
-  <!-- ASCII‑попапы: рандом по экрану -->
+  <!-- ASCII‑попапы: увеличенные, поверх всего -->
   <script>
   (() => {
-    let last = 0, active = 0, MAX_ACTIVE = 5;
+    let last = 0, active = 0, MAX_ACTIVE = 8;   // больше одновременно
 
-    // милые «каомодзи» и мини‑рисунки
+    // базовый набор каомодзи/мини-рисунков
     const girls = [
 `(\\_/)\n( •_•) ♡\n/>💗`,
 `(｡•̀ᴗ-)✧\n  ⌒☆`,
@@ -190,10 +210,11 @@
 `(>‿◠)✌`,
 `(•̀ω•́)✧`,
 `(〃▽〃)`,
-`(づ｡◕‿‿◕｡)づ`
+`(づ｡◕‿‿◕｡)づ`,
+`₍ᐢ.  ̫ .ᐢ₎♡`
     ];
 
-    // компактная «Мона Лиза» (лучше читается)
+    // компактная «Мона Лиза»
     const mona = [
 `  _________
  /  _____  \\
@@ -213,44 +234,44 @@
   \\_____\\`
     ];
 
-    // дополнительные символы/эмодзи‑роя
-    const symbols = [
-      `★`, `☆`, `✦`, `✧`, `❀`, `❁`, `♡`, `❤`, `☼`, `☾`, `☽`,
-      `彡`, `ミ`, `🪽`, `💗`, `🫧`, `✿`, `🎀`, `∞`
-    ];
+    // дополнительные символы/эмодзи‑рой
+    const symbols = [ `★`,`☆`,`✦`,`✧`,`❀`,`❁`,`♡`,`❤`,`☼`,`☾`,`☽`,`彡`,`ミ`,`🪽`,`💗`,`🫧`,`✿`,`🎀`,`∞` ];
 
-    const pool = []
-      .concat(girls)
-      .concat(mona)
-      .concat(symbols.map(s => `${s}`));
+    const pool = [].concat(girls, mona, symbols);
 
     function spawnAtRandom(){
       if(active >= MAX_ACTIVE) return;
       active++;
       const vw = window.innerWidth, vh = window.innerHeight;
-      const x = Math.random()*vw, y = Math.random()*vh;
+      const x = Math.random() * vw, y = Math.random() * vh;
 
       const el = document.createElement('pre');
       el.className = 'ascii-pop';
       el.textContent = pool[(Math.random()*pool.length)|0];
-      el.style.fontSize = (10 + Math.floor(Math.random()*7)) + 'px';
+
+      // твой увеличенный размер
+      const base = 28 + Math.floor(Math.random() * 28);   // 28–56
+      const jumboBoost = Math.random() < 0.18 ? 16 : 0;   // 18% шанс +16
+      el.style.fontSize = (base + jumboBoost) + 'px';
+
       el.style.left = x + 'px';
       el.style.top  = y + 'px';
-      el.style.color = (Math.random()<0.5) ? '#ff66c4' : '#8a7cff';
+      el.style.color = (Math.random() < 0.5) ? '#ff66c4' : '#8a7cff';
+
       document.body.appendChild(el);
-      setTimeout(() => { el.remove(); active--; }, 1800);
+      setTimeout(() => { el.remove(); active--; }, 2300);
     }
 
-    // запускаем иногда при движении мыши
+    // чаще при движении мыши
     window.addEventListener('mousemove', () => {
       const now = performance.now();
-      if (now - last < 120) return;
+      if (now - last < 90) return;
       last = now;
-      if (Math.random() < 0.10) spawnAtRandom();
+      if (Math.random() < 0.14) spawnAtRandom();
     }, { passive: true });
 
-    // и периодически сами по себе
-    setInterval(() => { if (Math.random() < 0.15) spawnAtRandom(); }, 2200);
+    // и сами по себе
+    setInterval(() => { if (Math.random() < 0.18) spawnAtRandom(); }, 2000);
   })();
   </script>
 </body>
