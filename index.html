@@ -7,11 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
+    /* ASCII-герой вместо «цветочка» */
     .ascii-hero{
       white-space:pre; font:700 14px/1.1 ui-monospace,Menlo,Consolas,monospace;
       color:#ff66c4; text-shadow:0 2px 12px rgba(255,102,161,.35), 0 0 1px #fff;
       background:transparent; padding:8px 10px; border-radius:16px; display:block;
     }
+    /* поверх всего и крупнее (если в style.css было иначе — это перебьёт) */
     .ascii-pop{
       position:fixed; z-index:2147483647; pointer-events:none; white-space:pre;
       font-family:ui-monospace,Menlo,Consolas,monospace; font-weight:700; letter-spacing:.5px;
@@ -30,21 +32,42 @@
 <body>
   <header class="site-header">
     <h1>GIRLSTACK LAB 💗 Decoy Girls</h1>
-    <p class="lead">квир-исследование · эротика как инфраструктура · attention-ecology</p>
+    <p class="lead">квир‑исследование · эротика как инфраструктура · attention‑ecology</p>
+
   </header>
 
-  <!-- НАВИГАЦИОННЫЙ ИНСТРУМЕНТ -->
+  <!-- ▲ НАВИГАЦИОННЫЙ ИНСТРУМЕНТ (только розовые кружочки) -->
   <section class="nav-instrument" aria-label="Навигационная карта разделов">
     <svg class="nav-map"
          viewBox="0 0 760 180"
          preserveAspectRatio="xMidYMid meet"
          xmlns="http://www.w3.org/2000/svg"
          xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
-      <a xlink:href="#lab"><circle class="dot pulse" cx="80"  cy="90" r="9"/><text class="label" x="100" y="93">Lab / Methods</text></a>
-      <a xlink:href="#characters"><circle class="dot pulse" cx="260" cy="70" r="9"/><text class="label" x="280" y="73">Characters</text></a>
-      <a xlink:href="#archive"><circle class="dot pulse" cx="380" cy="110" r="9"/><text class="label" x="400" y="113">Archive</text></a>
-      <a xlink:href="#research"><circle class="dot pulse" cx="520" cy="75" r="9"/><text class="label" x="540" y="78">Research Notes</text></a>
-      <a xlink:href="#reading"><circle class="dot pulse" cx="680" cy="100" r="9"/><text class="label" x="700" y="103">Credits / Reading</text></a>
+      <!-- Lab -->
+      <a xlink:href="#lab" aria-label="Lab / Methods">
+        <circle class="dot pulse" cx="80"  cy="90" r="9"/>
+        <text class="label" x="100" y="93">Lab / Methods</text>
+      </a>
+      <!-- Characters -->
+      <a xlink:href="#characters" aria-label="Characters">
+        <circle class="dot pulse" cx="260" cy="70" r="9"/>
+        <text class="label" x="280" y="73">Characters</text>
+      </a>
+      <!-- Archive -->
+      <a xlink:href="#archive" aria-label="Archive">
+        <circle class="dot pulse" cx="380" cy="110" r="9"/>
+        <text class="label" x="400" y="113">Archive</text>
+      </a>
+      <!-- Research -->
+      <a xlink:href="#research" aria-label="Research Notes">
+        <circle class="dot pulse" cx="520" cy="75" r="9"/>
+        <text class="label" x="540" y="78">Research Notes</text>
+      </a>
+      <!-- Reading -->
+      <a xlink:href="#reading" aria-label="Credits / Reading">
+        <circle class="dot pulse" cx="680" cy="100" r="9"/>
+        <text class="label" x="700" y="103">Credits / Reading</text>
+      </a>
     </svg>
   </section>
 
@@ -52,103 +75,197 @@
     <!-- INTRO -->
     <section id="intro">
       <h2>Введение / Manifesto 💗</h2>
+
       <figure class="float-right shape-circle w32">
         <img src="media/1.png" alt="flower / girlstack aura">
         <figcaption>«мягкая» аура: attention as milieu</figcaption>
       </figure>
-      <p>В эпоху платформ доверие стало управляемой инфраструктурой…</p>
+    
+      <p>В эпоху платформ доверие стало управляемой инфраструктурой. Эротика встраивается в эту логику: обещание
+      «реального тела» монетизируется как доступ к интимности. <em>Decoy Girls</em> меняет оптику: мы рассматриваем
+      эротическое как технику рассеивания субъективности. Персонажи‑аватары работают как декои  -  они не подтверждают
+      «подлинность», а делают видимой саму работу сигналов, фильтров и алгоритмов доверия. Режим интимной беседы
+      (чат‑боты, приватные диалоги) производит эффект близости без гарантии истины; именно это и становится полем
+      художественного исследования.</p>
+
+      <img src="media/di.png" style="float:left; margin:0 20px 10px 0; max-width:32%">
+
+      <p><em>Decoy Girls</em> — эксперимент с персонажами, чатами и «интимными технологиями». Мы не романтизируем
+      OnlyFans как освобождение; напротив, вскрываем биополитические риски и милитаризацию «girling» как
+      weaponization.</p>
+      <div class="clear"></div>
     </section>
 
     <!-- RESEARCH -->
     <section id="research">
       <h2>Research Notes 🫧</h2>
-      <figure class="float-left shape-soft w32"><img src="media/kitty.gif" alt="looping gif"></figure>
-      <p><strong>Доверие как инфраструктура.</strong> …</p>
+      <figure class="float-left shape-soft w32">
+        <img src="media/kitty.gif" alt="looping gif">
+        
+      </figure>
+
+      <p><strong>Доверие как инфраструктура.</strong> Дезинформация сегодня - это настройка оптики доверия: шум,
+      перегрузка, когнитивные сбои. Интимность в цифре воспроизводит эту логику: эффект близости создаётся
+      алгоритмами лестности и подстройки.</p>
+
+      <p><strong>Girlification и алгоритмы.</strong> «Девушка»  -  инженерия внимания: фильтры, интерфейсы, ритуалы
+      удержания. Она становится узлом в петле алгоритмов, где «подлинность»  -  режим рендеринга доверия.</p>
+
+      <p><strong>Интимные технологии.</strong> Чат‑боты и приватные диалоги производят распределённую интимность  - 
+      между скриптами, платформами и воображением.</p>
+      <div class="clear"></div>
     </section>
 
     <!-- CHARACTERS -->
     <section id="characters">
       <h2>Characters / Decoy Types 🕸️</h2>
       <figure class="float-right shape-circle w32">
-        <img src="media/output.png" alt="decoy types" style="width:80%">
+        <img src="media/output.png" alt="decoy types" width: 100 %>
       </figure>
-      <p><strong>Ультра-гладкая.</strong> …</p>
+      <p><strong>Ультра‑гладкая.</strong> Идеальное Instagram‑тело; гладкость как маска алгоритма.</p>
+      <p><strong>Gothic.</strong> Глитч и призрак; цифровая девушка как spectral‑фигура.</p>
+      <p><strong>Angel/Mystic.</strong> Тело‑медиум; обещание трансценденции как код.</p>
+      <p><strong>NPC/Decoy.</strong> Открытая искусственность; пустота как защита и укрытие.</p>
+      <div class="clear"></div>
     </section>
 
     <!-- ARCHIVE -->
     <section id="archive">
       <h2>Fieldwork / Archive 💿</h2>
-      <figure class="float-left shape-soft w32"><img src="media/4.png" alt="interface atlas"></figure>
-      <p>Исследовательский атлас…</p>
+      <figure class="float-left shape-soft w32">
+        <img src="media/4.png" alt="interface atlas">
+        <figcaption>атлас интерфейсов и метрик</figcaption>
+      </figure>
+      <p>Исследовательский атлас: публичные скриншоты интерфейсов, визуальные стили, рекламные стратегии, заметки о
+      видимости/цензуре. Позднее - полевые дневники, карты взаимодействий и фрагменты переписок (обезличенно).</p>
+      <div class="clear"></div>
     </section>
 
     <!-- LAB -->
     <section id="lab">
       <h2>Lab / Methods 🧪</h2>
-      <figure class="float-right shape-circle w32"><img src="media/old2.png" alt="lab bubble"></figure>
-      <p><strong>Перформанс + ресёрч + архивация.</strong> …</p>
+      <figure class="float-right shape-circle w32">
+        <img src="media/old2.png" alt="lab bubble">
+      </figure>
+      <p><strong>Перформанс + ресёрч + архивация.</strong> Генеративные тексты/изображения, ведение аккаунтов как
+      перформативных интерфейсов, переписки как полевые интервью, фиксация сбоев и реакций.</p>
+      <p><strong>Модули.</strong> Тон, визуальные паттерны, тактики доверия, дистрибуция, контр‑модуль (noise‑вставки,
+      прозрачность алгоритма через наложение схем/кода).</p>
+      <p><strong>Этика.</strong> Работа ведётся аватарами, все взаимодействия обезличиваются; учитываются риски
+      ghost‑work, неравный доступ к телесным технологиям и цифровой безопасности.</p>
+      <div class="clear"></div>
     </section>
 
     <!-- READING -->
     <section id="reading">
       <h2>Credits / Reading 💅</h2>
-      <figure class="float-left shape-soft w32"><img src="media/vid.gif" alt="reading mood"></figure>
+      <figure class="float-left shape-soft w32">
+        <img src="media/vid.gif" alt="reading mood">
+      </figure>
       <ul>
         <li>Jussi Parikka — <em>Insect Media</em></li>
         <li>Caroline Bassett & Luciana Parisi — <em>Thinking with the Female Drone</em></li>
+        <li>Bogna Konior — <em>AI Erotics</em></li>
+        <li>Alex Quicho — <em>Girlstack</em></li>
       </ul>
+      <p class="pink-sub">Инициаторы проекта: GIRLSTACK LAB 💗</p>
+      <div class="clear"></div>
     </section>
   </main>
 
-  <footer class="site-footer"><p>© GIRLSTACK LAB — CC BY-SA</p></footer>
+  <footer class="site-footer">
+    <p>© GIRLSTACK LAB — CC BY‑SA</p>
+  </footer>
 
-  <!-- ASCII-попапы -->
+  <!-- ASCII‑попапы: увеличенные, поверх всего -->
   <script>
   (() => {
-    let last = 0, active = 0, MAX_ACTIVE = 8;
+    let last = 0, active = 0, MAX_ACTIVE = 8;   // больше одновременно
+
+    // базовый набор каомодзи/мини-рисунков
     const girls = [
 `(\\_/)\n( •_•) ♡\n/>💗`,
 `(｡•̀ᴗ-)✧\n  ⌒☆`,
 `=＾• ⋏ •＾=`,
-`(˶ᵔ ᵕ ᵔ˶)✿`
+`(˶ᵔ ᵕ ᵔ˶)✿`,
+`(╯°□°)╯︵ ┻━┻`,
+`(っ˘з(˘⌣˘ ) ♡`,
+`૮₍ • ᴥ • ₎ა`,
+`彡☆ ･ﾟ:*`,
+`(ง •̀_•́)ง`,
+`(⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)`,
+`(✿◠‿◠)`,
+`(>‿◠)✌`,
+`(•̀ω•́)✧`,
+`(〃▽〃)`,
+`(づ｡◕‿‿◕｡)づ`,
+`₍ᐢ.  ̫ .ᐢ₎♡`
     ];
-    // ASCII-ангел вместо монализы
-    const angel = [
-`   ⠀  ˚₊· ͟͟͞͞➳❥   
-     ૮₍ • ᴥ • ₎ა  
-     ⊹ wings ♡⊹`,
-`     乁༼☯‿☯✿༽ㄏ  
-       ♥  angel ♥  
-     ⋆｡ﾟ✶°☁︎.｡.:*`
+
+    // компактная «Мона Лиза»
+    const mona = [
+`  _________
+ /  _____  \\
+|  /     \\  |
+| |  ◡  ◡ | |
+| |   ▱    | |
+| |  \\___/ | |
+|  \\______/  |
+ \\__________/`,
+`   _______
+  /  _  _\\
+ /  / \\  \\
+|  | o o  |
+|  |  ▱   |
+|  | \\_/  |
+ \\  \\___ / 
+  \\_____\\`
     ];
-    const symbols = [ `★`,`☆`,`✦`,`✧`,`❀`,`♡`,`☼`,`☾`,`🪽`,`💗`,`🫧` ];
-    const pool = [].concat(girls, angel, symbols);
+
+    // дополнительные символы/эмодзи‑рой
+    const symbols = [ `★`,`☆`,`✦`,`✧`,`❀`,`❁`,`♡`,`❤`,`☼`,`☾`,`☽`,`彡`,`ミ`,`🪽`,`💗`,`🫧`,`✿`,`🎀`,`∞` ];
+
+    const pool = [].concat(girls, mona, symbols);
 
     function spawnAtRandom(){
       if(active >= MAX_ACTIVE) return;
       active++;
       const vw = window.innerWidth, vh = window.innerHeight;
-      const x = Math.random()*vw, y = Math.random()*vh;
+      const x = Math.random() * vw, y = Math.random() * vh;
+
       const el = document.createElement('pre');
       el.className = 'ascii-pop';
       el.textContent = pool[(Math.random()*pool.length)|0];
-      const base = 28 + Math.floor(Math.random() * 28);
-      const jumboBoost = Math.random() < 0.18 ? 16 : 0;
+
+      // твой увеличенный размер
+      const base = 28 + Math.floor(Math.random() * 28);   // 28–56
+      const jumboBoost = Math.random() < 0.18 ? 16 : 0;   // 18% шанс +16
       el.style.fontSize = (base + jumboBoost) + 'px';
+
       el.style.left = x + 'px';
       el.style.top  = y + 'px';
-      el.style.color = (Math.random()<0.5) ? '#ff66c4' : '#8a7cff';
+      el.style.color = (Math.random() < 0.5) ? '#ff66c4' : '#8a7cff';
+
       document.body.appendChild(el);
       setTimeout(() => { el.remove(); active--; }, 2300);
     }
+
+    // чаще при движении мыши
     window.addEventListener('mousemove', () => {
       const now = performance.now();
       if (now - last < 90) return;
       last = now;
       if (Math.random() < 0.14) spawnAtRandom();
     }, { passive: true });
+
+    // и сами по себе
     setInterval(() => { if (Math.random() < 0.18) spawnAtRandom(); }, 2000);
   })();
   </script>
 </body>
 </html>
+
+
+
+
+
