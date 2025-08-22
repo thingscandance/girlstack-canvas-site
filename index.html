@@ -1,63 +1,257 @@
-<!-- ▲ НАВИГАЦИОННЫЙ ИНСТРУМЕНТ (прозрачная форма + розовые узлы) -->
-<section class="nav-instrument" aria-label="Навигационная карта разделов">
-  <svg class="nav-map"
-       viewBox="0 0 800 800"
-       preserveAspectRatio="xMidYMid meet"
-       xmlns="http://www.w3.org/2000/svg"
-       xmlns:xlink="http://www.w3.org/1999/xlink"
-       role="img" aria-label="Карта разделов">
-    <!-- нежная форма-силуэт (как в твоём рисунке) -->
-    <path class="path-shape"
-      d="M400,115
-         C470,240 470,360 400,390
-         C340,415 280,395 210,320
-         C150,260 120,240 115,240
-         C210,500 350,610 390,690
-         C400,715 410,700 420,690
-         C520,580 620,510 685,350
-         C695,320 700,300 695,280
-         C600,310 520,300 470,245
-         C430,195 430,160 400,115z" />
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GIRLSTACK LAB 💗 Decoy Girls</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>GIRLSTACK LAB 💗 Decoy Girls</h1>
+    <p class="lead">квир‑исследование · эротика как инфраструктура · attention‑ecology</p>
+    <nav class="tagline">
+      <a href="#intro">Введение</a>
+      <a href="#research">Research Notes</a>
+      <a href="#characters">Characters</a>
+      <a href="#archive">Fieldwork/Archive</a>
+      <a href="#lab">Lab/Methods</a>
+      <a href="#reading">Credits/Reading</a>
+    </nav>
+  </header>
 
-    <!-- КЛИКАБЕЛЬНЫЕ УЗЛЫ: расположены по 5 крестам на твоём эскизе -->
-    <!-- top -->
-    <a xlink:href="#intro">
-      <g>
-        <circle class="dot pulse" cx="400" cy="120" r="10"/>
-        <text class="label" x="418" y="123">Trust / Intro</text>
-      </g>
-    </a>
+  <!-- ▲ НАВИГАЦИОННЫЙ ИНСТРУМЕНТ (только розовые кружочки) -->
+  <section class="nav-instrument" aria-label="Навигационная карта разделов">
+    <svg class="nav-map"
+         viewBox="0 0 760 180"
+         preserveAspectRatio="xMidYMid meet"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+      <!-- Lab -->
+      <a xlink:href="#lab" aria-label="Lab / Methods">
+        <circle class="dot pulse" cx="80"  cy="90" r="9"/>
+        <text class="label" x="100" y="93">Lab / Methods</text>
+      </a>
+      <!-- Characters -->
+      <a xlink:href="#characters" aria-label="Characters">
+        <circle class="dot pulse" cx="260" cy="70" r="9"/>
+        <text class="label" x="280" y="73">Characters</text>
+      </a>
+      <!-- Archive -->
+      <a xlink:href="#archive" aria-label="Archive">
+        <circle class="dot pulse" cx="380" cy="110" r="9"/>
+        <text class="label" x="400" y="113">Archive</text>
+      </a>
+      <!-- Research -->
+      <a xlink:href="#research" aria-label="Research Notes">
+        <circle class="dot pulse" cx="520" cy="75" r="9"/>
+        <text class="label" x="540" y="78">Research Notes</text>
+      </a>
+      <!-- Reading -->
+      <a xlink:href="#reading" aria-label="Credits / Reading">
+        <circle class="dot pulse" cx="680" cy="100" r="9"/>
+        <text class="label" x="700" y="103">Credits / Reading</text>
+      </a>
+    </svg>
+  </section>
 
-    <!-- left -->
-    <a xlink:href="#lab">
-      <g>
-        <circle class="dot pulse" cx="120" cy="240" r="10"/>
-        <text class="label" x="138" y="243">Lab / Methods</text>
-      </g>
-    </a>
+  <main class="container">
+    <!-- INTRO -->
+    <section id="intro">
+      <h2>Введение / Manifesto 💗</h2>
+      <figure class="float-right shape-circle w32">
+        <img src="media/1.png" alt="flower / girlstack aura">
+        <figcaption>«мягкая» аура: attention as milieu</figcaption>
+      </figure>
 
-    <!-- right -->
-    <a xlink:href="#characters">
-      <g>
-        <circle class="dot pulse" cx="690" cy="290" r="10"/>
-        <text class="label" x="708" y="293">Characters</text>
-      </g>
-    </a>
+      <p>В эпоху платформ доверие стало управляемой инфраструктурой. Эротика встраивается в эту логику: обещание
+      «реального тела» монетизируется как доступ к интимности. <em>Decoy Girls</em> меняет оптику: мы рассматриваем
+      эротическое как технику рассеивания субъективности. Персонажи‑аватары работают как декои — они не подтверждают
+      «подлинность», а делают видимой саму работу сигналов, фильтров и алгоритмов доверия. Режим интимной беседы
+      (чат‑боты, приватные диалоги) производит эффект близости без гарантии истины; именно это и становится полем
+      художественного исследования.</p>
 
-    <!-- center -->
-    <a xlink:href="#archive">
-      <g>
-        <circle class="dot pulse" cx="400" cy="400" r="10"/>
-        <text class="label" x="418" y="404">Archive</text>
-      </g>
-    </a>
+      <img src="media/di.png" style="float:left; margin:0 20px 10px 0; max-width:32%">
 
-    <!-- bottom -->
-    <a xlink:href="#research">
-      <g>
-        <circle class="dot pulse" cx="395" cy="695" r="10"/>
-        <text class="label" x="413" y="698">Research Notes</text>
-      </g>
-    </a>
-  </svg>
-</section>
+      <p><em>Decoy Girls</em> — эксперимент с персонажами, чатами и «интимными технологиями». Мы не романтизируем
+      OnlyFans как освобождение; напротив, вскрываем биополитические риски и милитаризацию «girling» как
+      weaponization.</p>
+      <div class="clear"></div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research">
+      <h2>Research Notes 🫧</h2>
+      <figure class="float-left shape-soft w32">
+        <img src="media/kitty.gif" alt="looping gif">
+        <figcaption>луп / повтор как учебная кривая</figcaption>
+      </figure>
+
+      <p><strong>Доверие как инфраструктура.</strong> Дезинформация сегодня — это настройка оптики доверия: шум,
+      перегрузка, когнитивные сбои. Интимность в цифре воспроизводит эту логику: эффект близости создаётся
+      алгоритмами лестности и подстройки.</p>
+
+      <p><strong>Girlification и алгоритмы.</strong> «Девушка» — инженерия внимания: фильтры, интерфейсы, ритуалы
+      удержания. Она становится узлом в петле алгоритмов, где «подлинность» — режим рендеринга доверия.</p>
+
+      <p><strong>Интимные технологии.</strong> Чат‑боты и приватные диалоги производят распределённую интимность —
+      между скриптами, платформами и воображением.</p>
+      <div class="clear"></div>
+    </section>
+
+    <!-- CHARACTERS -->
+    <section id="characters">
+      <h2>Characters / Decoy Types 👧</h2>
+      <figure class="float-right shape-circle w32">
+        <img src="media/output.png" alt="decoy types">
+      </figure>
+
+      <p><strong>Ультра‑гладкая.</strong> Идеальное Instagram‑тело; гладкость как маска алгоритма.</p>
+      <p><strong>Gothic.</strong> Глитч и призрак; цифровая девушка как spectral‑фигура.</p>
+      <p><strong>Angel/Mystic.</strong> Тело‑медиум; обещание трансценденции как код.</p>
+      <p><strong>NPC/Decoy.</strong> Открытая искусственность; пустота как защита и укрытие.</p>
+      <div class="clear"></div>
+    </section>
+
+    <!-- ARCHIVE -->
+    <section id="archive">
+      <h2>Fieldwork / Archive 🗂️</h2>
+      <figure class="float-left shape-soft w32">
+        <img src="media/4.png" alt="interface atlas">
+        <figcaption>атлас интерфейсов и метрик</figcaption>
+      </figure>
+
+      <p>Исследовательский атлас: публичные скриншоты интерфейсов, визуальные стили, рекламные
+      стратегии, заметки о видимости/цензуре. Позднее — полевые дневники, карты взаимодействий и фрагменты переписок
+      (обезличенно).</p>
+      <div class="clear"></div>
+    </section>
+
+    <!-- LAB -->
+    <section id="lab">
+      <h2>Lab / Methods 🧪</h2>
+      <figure class="float-right shape-circle w32">
+        <img src="media/old2.png" alt="lab bubble">
+      </figure>
+
+      <p><strong>Перформанс + ресёрч + архивация.</strong> Генеративные тексты/изображения, ведение аккаунтов как
+      перформативных интерфейсов, переписки как полевые интервью, фиксация сбоев и реакций.</p>
+
+      <p><strong>Модули.</strong> Тон, визуальные паттерны, тактики доверия, дистрибуция, контр‑модуль
+      (noise‑вставки, прозрачность алгоритма через наложение схем/кода).</p>
+
+      <p><strong>Этика.</strong> Работа ведётся аватарами, все взаимодействия обезличиваются; учитываются риски
+      ghost‑work, неравный доступ к телесным технологиям и цифровой безопасности.</p>
+      <div class="clear"></div>
+    </section>
+
+    <!-- READING -->
+    <section id="reading">
+      <h2>Credits / Reading 📚</h2>
+      <figure class="float-left shape-soft w32">
+        <img src="media/vid.gif" alt="reading mood">
+      </figure>
+
+      <ul>
+        <li>Jussi Parikka — <em>Insect Media</em></li>
+        <li>Caroline Bassett & Luciana Parisi — <em>Thinking with the Female Drone</em></li>
+        <li>Bogna Konior — <em>AI Erotics</em></li>
+        <li>Alex Quicho — <em>Girlstack</em></li>
+      </ul>
+
+      <p class="pink-sub">Инициатор проекта: GIRLSTACK LAB 💗</p>
+      <div class="clear"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© GIRLSTACK LAB — CC BY‑SA</p>
+  </footer>
+
+  <!-- ASCII‑попапы: рандом по экрану -->
+  <script>
+  (() => {
+    let last = 0, active = 0, MAX_ACTIVE = 5;
+
+    // милые «каомодзи» и мини‑рисунки
+    const girls = [
+`(\\_/)\n( •_•) ♡\n/>💗`,
+`(｡•̀ᴗ-)✧\n  ⌒☆`,
+`=＾• ⋏ •＾=`,
+`(˶ᵔ ᵕ ᵔ˶)✿`,
+`(╯°□°)╯︵ ┻━┻`,
+`(っ˘з(˘⌣˘ ) ♡`,
+`૮₍ • ᴥ • ₎ა`,
+`彡☆ ･ﾟ:*`,
+`(ง •̀_•́)ง`,
+`(⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)`,
+`(✿◠‿◠)`,
+`(>‿◠)✌`,
+`(•̀ω•́)✧`,
+`(〃▽〃)`,
+`(づ｡◕‿‿◕｡)づ`
+    ];
+
+    // компактная «Мона Лиза» (лучше читается)
+    const mona = [
+`  _________
+ /  _____  \\
+|  /     \\  |
+| |  ◡  ◡ | |
+| |   ▱    | |
+| |  \\___/ | |
+|  \\______/  |
+ \\__________/`,
+`   _______
+  /  _  _\\
+ /  / \\  \\
+|  | o o  |
+|  |  ▱   |
+|  | \\_/  |
+ \\  \\___ / 
+  \\_____\\`
+    ];
+
+    // дополнительные символы/эмодзи‑роя
+    const symbols = [
+      `★`, `☆`, `✦`, `✧`, `❀`, `❁`, `♡`, `❤`, `☼`, `☾`, `☽`,
+      `彡`, `ミ`, `🪽`, `💗`, `🫧`, `✿`, `🎀`, `∞`
+    ];
+
+    const pool = []
+      .concat(girls)
+      .concat(mona)
+      .concat(symbols.map(s => `${s}`));
+
+    function spawnAtRandom(){
+      if(active >= MAX_ACTIVE) return;
+      active++;
+      const vw = window.innerWidth, vh = window.innerHeight;
+      const x = Math.random()*vw, y = Math.random()*vh;
+
+      const el = document.createElement('pre');
+      el.className = 'ascii-pop';
+      el.textContent = pool[(Math.random()*pool.length)|0];
+      el.style.fontSize = (10 + Math.floor(Math.random()*7)) + 'px';
+      el.style.left = x + 'px';
+      el.style.top  = y + 'px';
+      el.style.color = (Math.random()<0.5) ? '#ff66c4' : '#8a7cff';
+      document.body.appendChild(el);
+      setTimeout(() => { el.remove(); active--; }, 1800);
+    }
+
+    // запускаем иногда при движении мыши
+    window.addEventListener('mousemove', () => {
+      const now = performance.now();
+      if (now - last < 120) return;
+      last = now;
+      if (Math.random() < 0.10) spawnAtRandom();
+    }, { passive: true });
+
+    // и периодически сами по себе
+    setInterval(() => { if (Math.random() < 0.15) spawnAtRandom(); }, 2200);
+  })();
+  </script>
+</body>
+</html>
