@@ -20,7 +20,7 @@ img{max-width:100%;height:auto;display:block}
 .tagline a{color:var(--ink);text-decoration:none;padding:6px 10px;border-radius:999px;border:1px solid #eee}
 .tagline a:hover{background:#fafafa}
 
-/* layout */
+/* container */
 .container{width:min(980px,92vw);margin:18px auto 80px;padding:0 12px}
 h2{
   font-size:clamp(22px,3vw,34px);margin:28px 0 14px;
@@ -28,7 +28,7 @@ h2{
   -webkit-background-clip:text;background-clip:text;color:transparent
 }
 
-/* floats (делаем визуалы компактнее рядом с текстом) */
+/* floats */
 figure{margin:0 0 1rem}
 figcaption{font-size:.9rem;opacity:.75;margin-top:6px}
 .float-left,.float-right{max-width:32%;margin:.25rem 0 1rem}
@@ -39,18 +39,14 @@ figcaption{font-size:.9rem;opacity:.75;margin-top:6px}
 .shape-soft{shape-outside:inset(0 round 24px);border-radius:16px;overflow:hidden}
 .clear{clear:both}
 
-/* ------- NAV MAP (прозрачный SVG без фона) ------- */
-.nav-instrument{width:min(1100px,95vw);margin:0 auto 8px;padding:4px 0 0}
-.nav-map{width:100%;height:auto;display:block}
-@keyframes pulse{
-  0%,100%{r:9; filter:drop-shadow(0 0 0 rgba(255,105,180,0))}
-  50%{r:12; filter:drop-shadow(0 0 8px rgba(255,105,180,.35))}
-}
-.dot{fill:#ff69b4; stroke:#ffd1e9; stroke-width:.8; animation:pulse 2.2s ease-in-out infinite}
-.dot:hover{stroke:#fff; cursor:pointer}
+/* NAV MAP — прозрачная, компактная */
+.nav-instrument{width:min(760px,94vw);margin:10px auto 6px}
+.nav-map{display:block;width:100%;height:auto}
+.dot{fill:#ff66c4;stroke:#ffd1e9;stroke-width:1}
+.dot:hover{stroke:#fff;filter:drop-shadow(0 0 8px rgba(255,102,180,.45));cursor:pointer}
+@keyframes pulse{0%,100%{r:9}50%{r:12}}
+.pulse{animation:pulse 2.2s ease-in-out infinite}
 .label{font:600 12px/1 ui-monospace,Menlo,Consolas,monospace; fill:#222}
-.label a{fill:#222; text-decoration:none}
-.label a:hover{fill:#8a7cff}
 
 /* embeds */
 .embed{width:100%;aspect-ratio:16/9;background:#000;border-radius:16px;overflow:hidden;margin:12px 0 6px}
@@ -62,7 +58,7 @@ figcaption{font-size:.9rem;opacity:.75;margin-top:6px}
   font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;
   color:#ff66c4; opacity:0; transform:translate(-50%,-50%) scale(.95);
   text-shadow:0 2px 14px rgba(255,102,161,.35);
-  animation:popRise 1600ms ease-out forwards; will-change:transform,opacity
+  animation:popRise 1800ms ease-out forwards; will-change:transform,opacity
 }
 @keyframes popRise{
   0%{opacity:0; transform:translate(-50%,-40%) scale(.95)}
