@@ -1,155 +1,109 @@
 /* ------------ ТЕМА / ПАЛИТРА ------------ */
 :root {
-  --ink: #121214;
-  --bg: #fff;
-  --soft: #f6f6f8;
-
-  /* розовый градиент заголовков */
-  --pink-1: #ff66c4;
-  --pink-2: #ff8ad6;
-  --pink-3: #ffb3e6;
-
-  /* доп. акценты для ссылок/иконок */
-  --violet: #8a7cff;
-  --cyan: #6fe7ff;
+  --ink:#121214; --bg:#fff; --soft:#f6f6f8;
+  --pink-1:#ff66c4; --pink-2:#ff8ad6; --pink-3:#ffb3e6;
+  --violet:#8a7cff; --cyan:#6fe7ff;
 }
-
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font: 16px/1.6 "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ink);
+  font:16px/1.65 "Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
 }
 
 /* ------------ ШАПКА ------------ */
-.site-header {
-  padding: 48px 20px 16px;
-  text-align: center;
+.site-header{padding:48px 20px 16px;text-align:center}
+.site-header h1{
+  font-size:clamp(28px,4vw,48px); line-height:1.1; margin:0 0 8px;
+  background:linear-gradient(90deg,var(--pink-1),var(--pink-2),var(--pink-3));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
 }
-.site-header h1 {
-  font-size: clamp(28px, 4vw, 48px);
-  line-height: 1.1;
-  margin: 0 0 8px;
-  background: linear-gradient(90deg, var(--pink-1), var(--pink-2), var(--pink-3));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.lead {
-  margin: 0 auto 12px;
-  max-width: 800px;
-  opacity: .8;
-}
-.tagline a {
-  display: inline-block;
-  margin: 0 8px;
-  padding-bottom: 2px;
-  text-decoration: none;
-  color: var(--ink);
-  border-bottom: 2px solid var(--pink-2);
-}
-.tagline a:hover { color: var(--violet); border-color: var(--violet); }
+.lead{margin:0 auto 12px;max-width:800px;opacity:.8}
+
+/* ------------ НАВ ------------ */
+.tagline{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:6px}
+.tagline a{color:var(--ink);text-decoration:none;padding:6px 10px;border-radius:999px;border:1px solid #eee}
+.tagline a:hover{background:#fafafa}
 
 /* ------------ КОНТЕЙНЕР ------------ */
-.container {
-  width: min(980px, 92vw);
-  margin: 24px auto 80px;
-  padding: 0 12px;
-}
+.container{width:min(980px,92vw);margin:24px auto 80px;padding:0 12px}
 
 /* ------------ ЗАГОЛОВКИ ------------ */
-h2 {
-  font-size: clamp(22px, 3vw, 34px);
-  margin: 32px 0 16px;
-  background: linear-gradient(90deg, var(--pink-1), var(--pink-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+h2{
+  font-size:clamp(22px,3vw,34px); margin:32px 0 16px;
+  background:linear-gradient(90deg,var(--pink-1),var(--pink-2));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
 }
-.pink-sub {
-  font-weight: 700;
-  color: var(--ink);
-  border-left: 6px solid var(--pink-2);
-  padding-left: 10px;
-  margin-top: 20px;
-}
+.pink-sub{font-weight:700;color:var(--ink);border-left:6px solid var(--pink-2);padding-left:10px;margin-top:20px}
 
-/* ------------ ТЕКСТ ------------ */
-p, li { font-size: 1.02rem; }
-code { background: #ffe8f6; padding: 0 4px; border-radius: 4px; }
-
-/* ------------ ССЫЛКИ ------------ */
-a { color: var(--ink); text-decoration: underline; text-decoration-style: wavy; text-decoration-color: var(--pink-2); }
-a:hover { color: var(--violet); text-decoration-color: var(--violet); }
+/* ------------ ТЕКСТ / ССЫЛКИ ------------ */
+p,li{font-size:1.03rem}
+a{color:var(--ink);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--pink-2)}
+a:hover{color:var(--violet);text-decoration-color:var(--violet)}
 
 /* ------------ ФИГУРЫ / ОБТЕКАНИЕ ------------ */
-figure { margin: 0 0 1rem; }
-figcaption {
-  font-size: .9rem;
-  opacity: .75;
-  margin-top: 6px;
+figure{margin:0 0 1rem}
+figcaption{font-size:.9rem;opacity:.75;margin-top:6px}
+
+/* Уменьшили визуалы относительно текста */
+.float-left,.float-right{max-width:32%;margin:.25rem 0 1rem}
+.float-left{float:left;margin-right:1rem}
+.float-right{float:right;margin-left:1rem}
+.w32{max-width:32%} .w40{max-width:40%}
+
+/* формы */
+.shape-circle img,.shape-soft img{display:block;width:100%;height:auto}
+.shape-circle{shape-outside:circle(50%);border-radius:50%;overflow:hidden}
+.shape-soft{shape-outside:inset(0 round 24px);border-radius:16px;overflow:hidden}
+
+/* сброс обтекания */
+.clear{clear:both}
+
+/* ------------ ВИДЕО / EMBED ------------ */
+.embed{width:100%;aspect-ratio:16/9;background:#000;border-radius:16px;overflow:hidden;margin:12px 0 6px}
+.embed iframe{width:100%;height:100%;border:0}
+
+/* ------------ ЖИВАЯ КАРТА СИГНАЛОВ ------------ */
+/* full-bleed секция: занимает почти всю ширину экрана */
+.fullbleed{width:100vw;margin:24px 0 10px;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw}
+.signal-map{position:relative;border-radius:18px;overflow:hidden;background:#000}
+.signal-map img{display:block;width:100%;height:auto;filter:contrast(105%) saturate(105%)}
+/* делаем карту низким кинематографичным панорамным блоком */
+.signal-map.signal-wide{aspect-ratio:21/9;max-height:70vh}
+
+/* кликабельные узлы (если используешь <a> поверх GIF) */
+.signal-map a.hot{position:absolute;width:96px;height:96px;border-radius:50%;
+  transform:translate(-50%,-50%);outline:none;border:2px solid rgba(255,102,161,.28)}
+.signal-map a.hot:hover{border-color:var(--pink-1);box-shadow:0 0 0 6px rgba(255,102,161,.12)}
+
+/* если используешь SVG‑круги (как в версии с partials) */
+.signal-map svg.hotspots{position:absolute;inset:0}
+.signal-map .hot{fill:transparent;stroke:rgba(255,102,161,.35);stroke-width:1.6}
+.signal-map .hot:hover{stroke:var(--pink-1);filter:drop-shadow(0 0 6px rgba(255,102,161,.25))}
+
+/* ------------ ASCII POPUPS ------------ */
+.ascii-pop{
+  position:fixed; z-index:9999; white-space:pre; pointer-events:none;
+  font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  color:#ff69b4; opacity:0; transform:translate(-50%,-50%) scale(.95);
+  text-shadow:0 2px 14px rgba(255,102,161,.35);
+  animation: popRise 1600ms ease-out forwards;
+  will-change: transform, opacity;
 }
-
-/* плавающие блоки с обтеканием */
-.float-left, .float-right {
-  max-width: 46%;
-  margin: .25rem 0 1rem;
-}
-.float-left  { float: left;  margin-right: 1rem; }
-.float-right { float: right; margin-left: 1rem; }
-.w40 { max-width: 40%; }
-
-/* «форма» обтекания: круг или мягкий прямоугольник */
-.shape-circle img, .shape-soft img { display: block; width: 100%; height: auto; }
-.shape-circle { shape-outside: circle(50%); border-radius: 50%; overflow: hidden; }
-.shape-soft   { shape-outside: inset(0 round 24px); border-radius: 16px; overflow: hidden; }
-
-/* сброс обтекания после секции, чтобы ниже не «залипало» */
-.clear { clear: both; }
-
-/* ------------ Блоковые медиа ------------ */
-.block-media { margin: 16px 0 20px; }
-.video {
-  width: 100%;
-  max-height: 70vh;
-  display: block;
-  border-radius: 16px;
-  background: #000;
-}
-
-/* респонсивное встраивание YouTube/Vimeo */
-.embed {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #000;
-  border-radius: 16px;
-  overflow: hidden;
-  margin: 12px 0 6px;
-}
-.embed iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-/* ------------ СПИСКИ ССЫЛОК ------------ */
-.links { padding-left: 1.2rem; }
-.links li { margin: .25rem 0; }
-
-/* ------------ ПРИМЕЧАНИЯ ------------ */
-.note { font-size: .95rem; opacity: .75; }
-
-/* ------------ ПОДВАЛ ------------ */
-.site-footer {
-  padding: 28px 20px 60px;
-  text-align: center;
-  background: var(--soft);
-  color: #555;
+@keyframes popRise{
+  0%{opacity:0; transform:translate(-50%,-40%) scale(.95)}
+  12%{opacity:1}
+  70%{opacity:1}
+  100%{opacity:0; transform:translate(-50%,-90%) scale(1.05)}
 }
 
 /* ------------ МОБИЛЬНАЯ АДАПТАЦИЯ ------------ */
-@media (max-width: 860px) {
-  .float-left, .float-right, .w40 { float: none; max-width: 100%; margin: 0 0 1rem; }
-  .shape-circle, .shape-soft { shape-outside: none; border-radius: 14px; }
+@media (max-width:860px){
+  .float-left,.float-right,.w32,.w40{float:none;max-width:100%;margin:0 0 1rem}
+  .shape-circle,.shape-soft{shape-outside:none;border-radius:14px}
+  .signal-map.signal-wide{aspect-ratio:auto;max-height:none}
+  .signal-map a.hot{width:80px;height:80px}
 }
+
+/* ------------ ПОДВАЛ ------------ */
+.site-footer{padding:28px 20px 60px;text-align:center;background:var(--soft);color:#555}
